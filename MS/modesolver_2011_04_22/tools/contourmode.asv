@@ -51,9 +51,8 @@ if (nargin < 4) || isempty(dB)
 end
 
 % Compute and plot contours
-[X,Y] =meshgrid(x,y);
-c = surf(X,Y,real(transpose(mode)));
-shading interp
+c = surf(x,y,20*log10(abs(transpose(mode))),dB);
+shading in
 % cmap = colormap;
 % ii = 1;
 % cla;
